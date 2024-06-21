@@ -8,43 +8,43 @@ Python (3.9+ recommended)
 Azure account with Cognitive Search service credentials, Cosmosdb account with mongodb vcore database configured, OpenAI service up and running
 MongoDB account with database and collection set up.
 
-    #Installation
-    ##Clone the repository:
+#Installation
+##Clone the repository:
 
     `git clone https://github.com/yourusername/your-repository.git
      cd your-repository`
 
 
-    ##Install dependencies using pip:
+##Install dependencies using pip:
 
     `pip install -r requirements.txt`
 
 
-    #Configuration
+#Configuration
 
-    ##Azure Cognitive Search Setup:
+##Azure Cognitive Search Setup:
       Obtain your Azure Cognitive Search service endpoint and admin key.
       Replace search_service_endpoint and search_service_key in document.py with your credentials.
 
 
-    ##OpenAI Setup:
-      Obtain your OpenAI API key.
-      Replace openai.api_key in document.py with your API key.
+##OpenAI Setup:
+    Obtain your OpenAI API key.
+    Replace openai.api_key in document.py with your API key.
 
 
-    ##MongoDB Setup:
+##MongoDB Setup:
 Replace user, password, and host variables in document.py with your MongoDB credentials and connection details.
 Usage
 
 
-    ##Start the Flask Application:
+##Start the Flask Application:
 
     `python document.py`
 
 This will start the Flask server locally.
 
 
-    ##Send POST Requests:
+##Send POST Requests:
 
 To perform a custom query, send a POST request to http://localhost:5000/vector_search with JSON data containing the query.
 Example using cURL:
@@ -52,7 +52,7 @@ Example using cURL:
     `curl -X POST http://localhost:5000/vector_search -H "Content-Type: application/json" -d '``{"query": "Your custom query here"}'`
 
 
-    ##Response:
+##Response:
 
 The server will respond with JSON data containing the search results based on vector similarity.
 
