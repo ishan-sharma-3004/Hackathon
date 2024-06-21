@@ -1,57 +1,58 @@
-In today's era of data-driven applications, the ability to swiftly locate and retrieve information stands as a pivotal requirement. This project seamlessly combines the robust capabilities of Azure Cognitive Search, OpenAI's API, and MongoDB within a Flask application. It exemplifies how developers can harness advanced search functionalities empowered by natural language processing (NLP) and vector similarity algorithms.
+This is my hackathon submission for Microsoft Developer AI Learning HAckathon 
 
 At its heart, this project revolves around a Flask web application that acts as a user-friendly interface. It efficiently manages user queries and orchestrates interactions with Azure Cognitive Search, OpenAI's API, and MongoDB.
 
-Ensure you have the following installed:
+##Ensure you have the following installed:
 
 Python (3.9+ recommended)
-pip (Python package installer)
 Azure account with Cognitive Search service credentials, Cosmosdb account with mongodb vcore database configured, OpenAI service up and running
 MongoDB account with database and collection set up.
 
-Installation
-Clone the repository:
+#Installation
+##Clone the repository:
 
-`git clone https://github.com/yourusername/your-repository.git`
-`cd your-repository`
-
-
-Install dependencies using pip:
-
-`pip install -r requirements.txt`
-
-Configuration
-
-Azure Cognitive Search Setup:
-Obtain your Azure Cognitive Search service endpoint and admin key.
-Replace search_service_endpoint and search_service_key in document.py with your credentials.
+    `git clone https://github.com/yourusername/your-repository.git
+     cd your-repository`
 
 
-OpenAI Setup:
-Obtain your OpenAI API key.
-Replace openai.api_key in document.py with your API key.
+##Install dependencies using pip:
+
+    `pip install -r requirements.txt`
 
 
-MongoDB Setup:
+#Configuration
+
+##Azure Cognitive Search Setup:
+      Obtain your Azure Cognitive Search service endpoint and admin key.
+      Replace search_service_endpoint and search_service_key in document.py with your credentials.
+
+
+##OpenAI Setup:
+      Obtain your OpenAI API key.
+      Replace openai.api_key in document.py with your API key.
+
+
+##MongoDB Setup:
 Replace user, password, and host variables in document.py with your MongoDB credentials and connection details.
 Usage
 
 
-Start the Flask Application:
+##Start the Flask Application:
 
-`python document.py`
+    `python document.py`
 
 This will start the Flask server locally.
 
-Send POST Requests:
+
+##Send POST Requests:
 
 To perform a custom query, send a POST request to http://localhost:5000/vector_search with JSON data containing the query.
 Example using cURL:
 
-`curl -X POST http://localhost:5000/vector_search -H "Content-Type: application/json" -d '``{"query": "Your custom query here"}'`
+    `curl -X POST http://localhost:5000/vector_search -H "Content-Type: application/json" -d '``{"query": "Your custom query here"}'`
 
 
-Response:
+##Response:
 
 The server will respond with JSON data containing the search results based on vector similarity.
 
