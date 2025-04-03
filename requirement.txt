@@ -1,0 +1,6 @@
+flask
+openai
+pymongo
+azure-core
+azure-search-documents
+
